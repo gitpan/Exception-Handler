@@ -1,7 +1,7 @@
 package Exception::Handler;
 use strict;
 use vars qw( $VERSION );
-$VERSION = 1.00_2; # 12/23/02, 1:44 am
+$VERSION = 1.00_3; # Fri Sep 19 00:37:33 CDT 2003
 
 # --------------------------------------------------------
 # Constructor
@@ -85,7 +85,7 @@ $ialias. $sub
             : '-was called without args' ]}
        @{[ ($evaltext)
             ? '-was called to evalate text'
-            : '-was not called to evaluate anything' ]}]
+            : '-was not called to evaluate anything' ]}
 __ERR__
       }
       else {

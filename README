@@ -1,4 +1,4 @@
-Exception::Handler version 1.00_2
+Exception::Handler version 1.00_3
 =================================
 
 DESCRIPTION
@@ -7,6 +7,11 @@ Report exceptions with formatted text call-stack
 
 CHANGES IN LAST FEW RELEASES
 (listed in reverse cronological order by date and subversion)
+
+   1.00_3
+      Fri Sep 19 00:37:33 CDT 2003
+      Corrected slight grammatical/spelling error in stack dumps produced
+      by method Exception::Handler::trace()
 
    1.00_2
       12/23/02, 1:44 am

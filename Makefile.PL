@@ -7,7 +7,7 @@ WriteMakefile
    (
    'ABSTRACT'     => 'Report exceptions with formatted call-stack',
    'AUTHOR'       => 'Tommy Butler <cpan@atrixnet.com>',
-   'INSTALLDIRS'  => 'perl',
+   'INSTALLDIRS'  => 'site',
    'NAME'         => 'Exception::Handler',
    'VERSION_FROM' => 'Handler.pm',
    'linkext'      => { LINKTYPE => '' }, # no link needed
@@ -19,19 +19,3 @@ WriteMakefile
          'ZIPFLAGS'  => '-rl',
       }
    );
-
-__END__
-   * NAME
-   * SYNOPSIS
-   * DESCRIPTION
-   * INSTALLATION
-   * EXPORT
-   * EXPORT_OK
-   * GLOBAL VARIABLES
-   * PUBLIC METHODS
-   * PRIVATE METHODS
-   * EXAMPLES
-   * BUGS
-   * AUTHOR
-   * COPYRIGHT
-   * SEE ALSO
