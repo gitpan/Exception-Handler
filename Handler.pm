@@ -131,32 +131,41 @@ sub DESTROY { } sub AUTOLOAD { }
 =pod
 
 =head1 NAME
+
 Exception::Handler - Report exceptions with formatted text call-stack
 
 =head1 VERSION
+
 1.00_2
 
 =head1 @EXPORT, @EXPORT_OK
+
 None.
 
 =head1 Methods
+
    new()
    fail()
    trace()
 
 =head2 AUTOLOAD-ed methods
+
 None.
 
 =head1 PREREQUISITES
+
 None.
 
 =head1 AUTHOR
+
 Tommy Butler <cpan@atrixnet.com>
 
 =head1 COPYRIGHT
+
 Copyright(c) 2001-2003, Tommy Butler.  All rights reserved.
 
 =head1 LICENSE
+
 This library is free software, you may redistribute
 and/or modify it under the same terms as Perl itself.
 
