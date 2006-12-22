@@ -1,12 +1,21 @@
 package Exception::Handler;
 use strict;
 use vars qw( $VERSION );
-$VERSION = 1.00_3; # Fri Sep 19 00:37:33 CDT 2003
+$VERSION = 1.00_4; # Thu Dec 21 18:04:23 CST 2006
 
 # --------------------------------------------------------
 # Constructor
 # --------------------------------------------------------
-sub new { bless({ }, shift(@_)) }
+sub new { 
+	my($this) = bless({ }, shift(@_));
+	$this->{'errors'} = [@_];
+	return $this
+}
+
+# --------------------------------------------------------
+# Exception::Handler::error()
+# --------------------------------------------------------
+sub error { @{ $_->{'errors'} } } # very bad; very easy
 
 
 # --------------------------------------------------------
@@ -21,7 +30,7 @@ sub fail  {
      # I refuse to manually initialize a standard environment
      # variable.  This is an example where the warnings pragma
      # is going too far.  It's something we live with.
-      local($^W) = undef;
+     local($^W) = undef;
 
      # if we're running in a CGI gateway iface, we need
      # to output the necessary HTTP headers
@@ -55,7 +64,7 @@ __crash__
 sub trace {
 
    my($this)    = shift(@_);
-   my(@errors)  = @_;
+   my(@errors)  = @_; $this->{'errors'} = [@errors];
    my($errfile) = '';
    my($caught)  = '';
    my(
@@ -147,6 +156,7 @@ None.
    new()
    fail()
    trace()
+   error()
 
 =head2 AUTOLOAD-ed methods
 
